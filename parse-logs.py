@@ -22,12 +22,12 @@
 # import needed libs
 import sys
 import getopt
-import redis  # python-redis redis
 import shlex
 import time
 import datetime
 import signal
 import socket
+import redis  # python-redis redis
 
 #################################################################################
 

@@ -1,3 +1,8 @@
+# Need to replace the following fields:
+# <serviceuser> ... take not the user root for
+# <file> ... the access log file from the 389-ds
+# <optional-params> ... what ever you need ...
+
 [Unit]
 Description=Log Parser for 389-ds logs
 Wants=network.target network-online.target nfs-client.target rsyslog.service

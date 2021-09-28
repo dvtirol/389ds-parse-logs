@@ -24,7 +24,7 @@ Script was only tested against python 3.6
 
 ## Usage
 
-Execute: <script> <params>
+Execute: ./parse-logs.py <params>
 ```bash
 Possible params:
 -i | --log_input     ... Input log file from 389-ds (needed)
