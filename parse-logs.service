@@ -1,0 +1,20 @@
+[Unit]
+Description=Log Parser for 389-ds logs
+Wants=network.target network-online.target nfs-client.target rsyslog.service
+After=network.target network-online.target nfs-client.target rsyslog.service
+
+[Service]
+Type=simple
+User=<serviceuser>
+Group=<serviceuser>
+PrivateTmp=true
+
+WorkingDirectory=/opt/parse-logs/
+ExecStart=/usr/bin/env /usr/bin/python3 /opt/parse-logs/parse-logs.py --log_input=<file>.log <optional-params>
+TimeoutSec=10
+
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
